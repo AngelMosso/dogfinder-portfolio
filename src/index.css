@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  /* Color de fondo seguro para evitar parpadeos negros/blancos */
+  overflow: hidden;
+  /* Mantenemos hidden si app-container maneja el scroll, pero quitamos fixed */
+}
+
+.can-be-transparent {
+  background-color: white;
+  transition: background-color 0.4s ease;
+}
+
+.is-camera-active {
+  background-color: transparent !important;
+  overflow: hidden !important;
+  height: 100dvh !important;
+  width: 100vw !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  left: 0;
+}
+
+/* FIX: Ocultar NavBar solo cuando el overlay de cámara está activo (clase en HTML) */
+html.is-camera-active nav {
+  display: none !important;
+}
+
+.app-root {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  transition: background-color 0.5s ease;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
+  /* Movemos pt-safe aquí */
+}
+
+@layer base {
+  :root {
+    --color-brand-50: #FFF8E1;
+    --color-brand-100: #FFECB3;
+    --color-brand-200: #FFE082;
+    --color-brand-300: #FFD54F;
+    --color-brand-400: #FFCA28;
+    --color-brand-500: #FFC107;
+    --color-brand-600: #FFB300;
+    --color-brand-700: #FFA000;
+    --color-brand-800: #FF8F00;
+    --color-brand-900: #FF6F00;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line 2s linear infinite;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

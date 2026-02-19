@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es" translate="no" class="notranslate">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="DogFinder" />
+  <meta name="theme-color" content="#ff5a5f" />
+  <meta name="google" content="notranslate" />
+  <link rel="apple-touch-icon" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .material-icons {
+      /* Proteger layout si la fuente de iconos falla */
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+      overflow: hidden;
+      max-width: 1.2em;
+      vertical-align: bottom;
+    }
+  </style>
+  <!-- Leaflet Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <!-- External Library CDNs (Mobile Speed & Build Stability) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/nsfwjs@2.4.2/dist/browser/nsfwjs.min.js" crossorigin="anonymous"></script>
+  <title>DogFinder - Rescate Canino IA</title>
+</head>
+
+<body class="overflow-x-hidden antialiased notranslate">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          console.log('Unregistering SW:', registration);
+          registration.unregister();
+        }
+        if (registrations.length > 0) {
+          console.log('SW encontrado y eliminado. Recargando...');
+          window.location.reload();
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

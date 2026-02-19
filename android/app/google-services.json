@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "767592902068",
+    "project_id": "dogfinder-7cf2c",
+    "storage_bucket": "dogfinder-7cf2c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767592902068:android:8273edc84ec1660ae696e1",
+        "android_client_info": {
+          "package_name": "com.dogfinder.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767592902068-iu2ut3pfba476q2tlb6i6c3qvtuo7p07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dogfinder.app",
+            "certificate_hash": "6e8edcd9542301021dc21a2f24e976411db5a00b"
+          }
+        },
+        {
+          "client_id": "767592902068-00ov5ivvrnm2csj5eq99jtf86iovfngc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_OHD5UTQLANlYceuDutAnVSu6QGLzcuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767592902068-00ov5ivvrnm2csj5eq99jtf86iovfngc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

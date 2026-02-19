@@ -1,0 +1,16 @@
+{
+  "appId": "com.dogfinder.app",
+  "appName": "findog",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "GoogleAuth": {
+      "scopes": [
+        "profile",
+        "email"
+      ],
+      "serverClientId": "767592902068-00ov5ivvrnm2csj5eq99jtf86iovfngc.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  }
+}
