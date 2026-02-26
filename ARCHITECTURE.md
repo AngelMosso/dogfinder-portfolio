@@ -84,5 +84,5 @@ $$ Score = (W_v \cdot S_{visual}) + (W_l \cdot S_{geo}) + (W_t \cdot S_{text}) $
 
 ---
 
-**Elaborado por:** DogFinder Senior Architecture Team
-**Contacto:** Arquitecto de Software Principal
+**Elaborado por:** Angel Yanif Mosso
+**Contacto:** Yanif.mosso@gmail.com
